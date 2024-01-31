@@ -20,7 +20,7 @@ const Button = ({
 
   return (
     <button
-      className=""
+      className="flex items-center justify-center border border-gray-950"
       onClick={() => !loading && onClick?.()}
       type={action}
       disabled={loading || disabled}
