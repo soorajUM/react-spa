@@ -6,7 +6,7 @@ import Layout from "../Input/Components/Layout";
 type PropsTypes = {
   type?: InputFieldType;
   arrow?: string;
-  leftIcon?:string;
+  leftIcon?: string;
   label?: string;
   icon?: string;
   error?: string;
@@ -47,7 +47,6 @@ const InputField = ({
           disabled={disabled}
           onBlur={onBlur}
         />
-
       ) : (
         <input
           type={type}
@@ -56,6 +55,7 @@ const InputField = ({
           onChange={(e) => onChange(e.target.value, e)}
           disabled={disabled}
           onBlur={onBlur}
+          className="rounded-lg border-stone-400 border p-2.5 w-full overflow-hidden font-base"
         />
       )}
     </Layout>

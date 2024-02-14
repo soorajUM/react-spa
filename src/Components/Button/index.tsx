@@ -1,26 +1,27 @@
-type ButtonType = 'Primary' | 'Secondary' | 'Inline';
+type ButtonType = "Primary" | "Secondary" | "Inline";
 
 interface PropsTypes {
   label: String;
   type?: ButtonType;
   onClick?: () => void;
-  action?: 'submit' | 'button';
+  action?: "submit" | "button";
   disabled?: boolean;
   loading?: boolean;
 }
 
 const Button = ({
   label,
-  type = 'Primary',
+  type = "Primary",
   onClick,
-  action = 'button',
+  action = "button",
   disabled = false,
   loading = false,
 }: PropsTypes) => {
-
   return (
     <button
-      className="flex items-center justify-center border border-gray-950"
+      className={` ${
+        disabled ? `opacity-50` : `opacity-100`
+      } border-black border rounded p-1 bg-slate-400 m-4`}
       onClick={() => !loading && onClick?.()}
       type={action}
       disabled={loading || disabled}

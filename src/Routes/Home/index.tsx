@@ -1,36 +1,35 @@
 import Form from "../../Components/InfraStructure/Form";
 
-import { validateRegister } from "../../Validation"
+import { validateRegister } from "../../Validation";
 
 const Home = () => {
   return (
-    <div className="form-container">
+    <div className="flex items-center justify-center h-screen">
       <Form
-        formStructure = {[
-            {
-                field: "name",
-                label: "Name"
-            },
-            {
-                field: "email",
-                label: "Email"
-            },
-            {
-                field: "phone",
-                label: "Phone"
-            }
+        formStructure={[
+          {
+            field: "name",
+            label: "Name",
+          },
+          {
+            field: "email",
+            label: "Email",
+          },
+          {
+            field: "phone",
+            label: "Phone",
+          },
         ]}
         emptyForm={{
-          name:"",
-          email:"",
-          phone:""
+          name: "",
+          email: "",
+          phone: "",
         }}
         validateFunction={validateRegister}
-        onSubmit={(d)=>console.log(d)}
+        onSubmit={(d) => console.log(d)}
       />
     </div>
-  )
-  
-}
+  );
+};
 
-export default Home
+export default Home;
